@@ -52,3 +52,98 @@
 * **Scalability:** It uses **AWS** to handle data that would crash a local laptop.
 * **Accuracy:** It uses **DTW** and the **Hungarian Algorithm** as specified in the "Technical Considerations."
 * **Innovation:** It uses **Gemini** to solve the "human" part of the problem—interpreting messy notes and comments.
+
+======================================================================================================================================================================================================================================================================
+
+Phase 1: Foundation & Alignment (Today: 5 PM – 9 PM)
+Goal: Sync the datasets so you can actually compare them.
+
+Gia (Data Architect):
+
+S3 Ingestion: Upload the 2007, 2015, and 2022 CSVs to Amazon S3.
+
+Standardization Script: Write a script on AWS Lambda to normalize headers. Use the table below for mapping.
+
+You (Algorithm Lead):
+
+Global Sequence Alignment (DTW): Use FastDTW in Python to align the distances.
+
+
+Reference Points: Filter all files for "Girth Weld" events. Use these fixed points as your "staples" to create a mapping function that converts 2007/2015 distances to the 2022 baseline.
++3
+
+Together (End of Day): Run a sanity check. If a valve is at 500ft in 2007, does your transformed coordinate put it at the correct 2022 distance?
+
+<img width="750" height="507" alt="image" src="https://github.com/user-attachments/assets/44316a53-cab0-4751-8168-d2b64510b935" />
+---------------------------------------------------------------------------------------------------------------------------
+Phase 2: The Matching Engine (Tomorrow: 9 AM – 1 PM)
+Goal: Pair the rust spots together using math and AI.
+
+Gia (AI Integration):
+
+Gemini API Setup: Set up the connection to Google Gemini 1.5 Flash.
+
+
+Verification Prompt: Design the prompt for "Agentic Verification".
+
+
+Prompt Example: "Compare these two features: 2015 'Metal Loss' at 10:00 vs 2022 'Pitting' at 10:05. Are they the same? Explain.".
+
+You (Matching Logic):
+
+
+Hungarian Algorithm: Build a "Cost Matrix" based on the synchronized distance and clock positions.
+
+
+Optimal Pairing: Use scipy.optimize.linear_sum_assignment to find the best 1-to-1 matches.
+
+Together: Run the engine. Your output should be a single "Master List" where each unique physical defect has its entire history (2007-2015-2022).
+-------------------------------------------------------------------------------------------------------------------------
+Phase 3: Analytics & Prediction (Tomorrow: 2 PM – 6 PM)
+Goal: Calculate growth and predict when the pipe will fail.
+  Gia (Visualization):
+    Streamlit Dashboard: Build the UI with two tabs: 
+      1. "Data Sync" (showing the logs lined up) and 2. "Risk Radar" (showing a map of dangerous spots).
+    You (Data Science):
+      Growth Calculation: For every matched pair, calculate the Corrosion Growth Rate (CGR): $(\Delta \text{Depth} / \Delta t)$.
+      Risk Prediction: Use a simple regression model on AWS SageMaker to predict the depth of these spots in 2030.
+Together: Flag any spot that is predicted to exceed 80% depth (critical failure) by the next inspection date.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+Phase 4: Polish & Submission (Tomorrow: 7 PM – 11 PM)
+Goal: Make the solution "Judge-Ready."
+
+
+Final Output: Export a final CSV where every physical anomaly has a unique Master_ID and a Confidence_Score.
+
+
+Pitch Preparation: Focus on the "Innovative" part of your solution—using AWS Lambda for scale, the Hungarian Algorithm for accuracy, and Gemini for expert-level data verification.
+
+Submission: record a screen-capture demo of your Streamlit app and upload your code.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
