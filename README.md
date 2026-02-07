@@ -1,7 +1,3 @@
-Your Original Step,The Documentation Requirement,The Final Tool
-Step A: Synchronization,Dynamic Time Warping (DTW),AWS Lambda + SciPy
-Step B: Intelligent Matching,Hungarian Algorithm + AI,Gemini 1.5 Flash API
-Step C: Growth Prediction,Regression / Ensemble Methods,AWS SageMaker
 
 
 <img width="628" height="247" alt="image" src="https://github.com/user-attachments/assets/e48d2ef0-d0fb-42f6-9bae-6e55a73bb8ff" />
