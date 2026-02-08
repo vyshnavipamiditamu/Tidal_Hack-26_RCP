@@ -1,0 +1,16 @@
+# Data Processing & Math
+pandas
+numpy
+scipy
+
+# Machine Learning & AI
+scikit-learn
+google-generativeai
+
+# Visualization & Dashboard
+streamlit
+plotly
+
+# Cloud & Infrastructure
+boto3
+sagemaker
