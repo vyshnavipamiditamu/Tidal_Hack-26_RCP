@@ -98,20 +98,28 @@ Together: Run the engine. Your output should be a single "Master List" where eac
 
 
 Phase 3: Analytics & Prediction (Tomorrow: 2 PM – 6 PM)
+
 Goal: Calculate growth and predict when the pipe will fail.
-  Gia (Visualization):
+
+Gia (Visualization):
     Streamlit Dashboard: Build the UI with two tabs: 
-      1. "Data Sync" (showing the logs lined up) and 2. "Risk Radar" (showing a map of dangerous spots).
-    You (Data Science):
+      1. "Data Sync" (showing the logs lined up) and 
+      2. "Risk Radar" (showing a map of dangerous spots).
+      
+You (Data Science):
       Growth Calculation: For every matched pair, calculate the Corrosion Growth Rate (CGR): $(\Delta \text{Depth} / \Delta t)$.
       Risk Prediction: Use a simple regression model on AWS SageMaker to predict the depth of these spots in 2030.
+      
 Together: Flag any spot that is predicted to exceed 80% depth (critical failure) by the next inspection date.
 
 -------------------------------------------------------------------------------------------------------------------------
 
 Phase 4: Polish & Submission (Tomorrow: 7 PM – 11 PM)
+
 Goal: Make the solution "Judge-Ready."
+
 Final Output: Export a final CSV where every physical anomaly has a unique Master_ID and a Confidence_Score.
+
 Pitch Preparation: Focus on the "Innovative" part of your solution—using AWS Lambda for scale, the Hungarian Algorithm for accuracy, and Gemini for expert-level data verification.
 
 Submission: record a screen-capture demo of your Streamlit app and upload your code.
